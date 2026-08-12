@@ -22,6 +22,8 @@ AS5600.magnet_detected()
 AS5600.magnet_too_weak()
 AS5600.magnet_too_strong()
 AS5600.magnet_ok()
+AS5600.multiTurnAngle()
+AS5600.resetMultiTurn()
 
 AS5600.agc()
 AS5600.magnitude()
