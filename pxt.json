@@ -1,0 +1,13 @@
+{
+    "name": "as5600",
+    "version": "0.0.1",
+    "description": "AS5600 magnetic angle sensor extension for BBC micro:bit MakeCode",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "public": true
+}
