@@ -65,8 +65,7 @@ Mark with the help of OPEN AI ChatGPT
 
 ## Electrical wirering
 micro:bit 
-AS5600 3.3V ------> VCC 
-ND ------> GND 
-SDA ------> SDA 
+AS5600 3.3V ------> VCC
+ND ------> GND
+SDA ------> SDA
 SCL ------> SCL
-
