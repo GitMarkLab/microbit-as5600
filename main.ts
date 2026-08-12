@@ -134,11 +134,9 @@ namespace AS5600 {
      */
     //% block="AS5600 magnet OK"
     //% weight=77
+
     export function magnetOK(): boolean {
-        let s = read8(REG_STATUS)
-        return (s & STATUS_MD) != 0 &&
-               (s & STATUS_ML) == 0 &&
-               (s & STATUS_MH) == 0
+        return (read8(REG_STATUS) & STATUS_MD) != 0
     }
 
     /**
