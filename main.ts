@@ -17,6 +17,9 @@ namespace AS5600 {
     const STATUS_MH = 0x08
 
     let zeroOffset = 0
+    let lastAngle = 0
+    let totalAngle = 0
+    let multiTurnInitialized = false
 
     function read8(reg: number): number {
         let w = pins.createBuffer(1)
