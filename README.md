@@ -61,11 +61,3 @@ The normal AS5600 uses I²C address `0x36`. Multiple AS5600 devices therefore ca
 This extension only reads the sensor. `zero_here()` is a software zero and does **not** write the AS5600's configuration or burn OTP memory.
 
 ## Creator
-Mark with the help of OPEN AI ChatGPT
-
-## Electrical wirering
-micro:bit 
-AS5600 3.3V ------> VCC
-ND ------> GND
-SDA ------> SDA
-SCL ------> SCL
