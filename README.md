@@ -70,28 +70,3 @@ ND ------> GND
 SDA ------> SDA 
 SCL ------> SCL
 
-## Microsoft Makecode Integration
-### create a project
-
-![[Pasted image 20260812120121.png]]
-
-### Extensions
-
-![[Pasted image 20260812120213.png]]
-
-### add URL to the search bar
-https://github.com/GitMarkLab/microbit-as5600
-
-![[Pasted image 20260812120256.png]]
-
-### copy python example
-
-![[Pasted image 20260812120638.png]]
-
-### switch to Blocks to see the example
-
-![[Pasted image 20260812120503.png]]
-
-### use Arduino IDE 2.0 to view serial 
-
-![[Pasted image 20260812121003.png]]
