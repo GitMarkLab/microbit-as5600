@@ -120,7 +120,7 @@ namespace AS5600 {
         return (read8(REG_STATUS) & STATUS_ML) != 0
     }
 
-    /**
+    /**git reset --hard origin/main
      * True if the magnetic field is too strong.
      */
     //% block="AS5600 magnet too strong"
@@ -155,5 +155,52 @@ namespace AS5600 {
     //% weight=69
     export function magnitude(): number {
         return read12(REG_MAGNITUDE_H)
+    }
+
+
+    /**
+     * Continuous multi-turn angle in degrees.
+     * Can increase above 360 or decrease below 0.
+     */
+    //% block="AS5600 multi turn angle degrees"
+    //% weight=85
+    export function multiTurnAngle(): number {
+        let current = angle()
+
+        if (!multiTurnInitialized) {
+            lastAngle = current
+            totalAngle = current
+            multiTurnInitialized = true
+            return totalAngle * 360 / 4096
+        }
+
+        let delta = current - lastAngle
+
+        // Crossing 4095 -> 0 forwards
+        if (delta < -2048) {
+            delta += 4096
+        }
+
+        // Crossing 0 -> 4095 backwards
+        if (delta > 2048) {
+            delta -= 4096
+        }
+
+        totalAngle += delta
+        lastAngle = current
+
+        return totalAngle * 360 / 4096
+    }
+
+
+    /**
+     * Reset multi-turn angle to zero.
+     */
+    //% block="AS5600 reset multi turn angle"
+    //% weight=84
+    export function resetMultiTurn(): void {
+        lastAngle = angle()
+        totalAngle = 0
+        multiTurnInitialized = true
     }
 }
