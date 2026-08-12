@@ -59,3 +59,6 @@ The normal AS5600 uses I²C address `0x36`. Multiple AS5600 devices therefore ca
 ## Safety
 
 This extension only reads the sensor. `zero_here()` is a software zero and does **not** write the AS5600's configuration or burn OTP memory.
+
+## Creator
+OPEN AI ChatGPT
