@@ -4,6 +4,8 @@ A small read-only MakeCode extension for the **ams OSRAM AS5600** magnetic angle
 
 It is intended for the BBC micro:bit and uses I²C address `0x36`.
 
+if you need more than one magnetic encoder, use the i2c switch tca9548a. See my repo microbit-tca9548a. Its tested with up to four AS5600
+
 ## Functions
 
 In MakeCode Python:
